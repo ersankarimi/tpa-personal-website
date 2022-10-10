@@ -100,3 +100,11 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

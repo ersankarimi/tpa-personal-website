@@ -1,0 +1,59 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+@import url("./root.css");
+@import url("./header.css");
+@import url("./main.css");
+
+.links {
+  display: inline;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  padding-bottom: 4rem;
+}
+
+section p {
+  margin: 4px 0 8px 0px;
+}
+
+section#introduction > h1 {
+  font-family: "Sarina", cursive;
+  font-size: 2rem;
+}
+
+.introduction__body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+section > h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+#social-media-paragraph {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85em;
+}
+
+.social-media-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+  color: #00b1cc;
+  font-size: 1.125rem;
+}
+
+.social-media-link:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}

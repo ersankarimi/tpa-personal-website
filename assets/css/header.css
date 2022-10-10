@@ -1,0 +1,68 @@
+header {
+  display: flex;
+  position: relative;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > a > img {
+  width: 8rem;
+}
+
+nav {
+  color: var(--gray-100);
+}
+
+.nav-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-800);
+  left: 0;
+  right: 0;
+  top: -1000px;
+  height: 100vh;
+  gap: 3rem;
+  transition: 500ms all;
+  z-index: 99999;
+}
+
+.nav-link {
+  color: var(--gray-100);
+}
+
+.nav-link.active {
+  padding: 0.5em 1em;
+  outline: solid;
+  outline-width: 1px;
+}
+
+.nav-link:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+.hamburger-menu {
+  width: 2rem;
+  height: 2rem;
+}
+
+.close-menu {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 5rem;
+}
+
+.hamburger-menu,
+.close-menu {
+  cursor: pointer;
+}
+
+.hamburger-menu:hover,
+.close-menu:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}

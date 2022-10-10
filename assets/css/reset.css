@@ -105,10 +105,6 @@ li {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-}
-
 button {
   cursor: pointer;
   border: none;
@@ -116,4 +112,6 @@ button {
 
 a {
   color: inherit;
+  display: block;
+  text-decoration: none;
 }

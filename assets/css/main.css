@@ -1,0 +1,34 @@
+@import url("./root.css");
+
+main {
+  color: var(--gray-100);
+  padding: 1rem 2rem;
+}
+
+/* Media Queries */ /* sm */
+@media screen and (min-width: 640px) {
+  main {
+    padding: 1rem 8rem;
+  }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+  main {
+    margin-top: 2rem;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+  main {
+    padding: 1rem 252px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    flex-direction: row;
+    margin-top: 124px;
+  }
+}

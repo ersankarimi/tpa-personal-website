@@ -66,3 +66,43 @@ nav {
   -webkit-filter: brightness(0.8);
   filter: brightness(0.8);
 }
+
+/* Media Queries */ /* sm */
+@media screen and (min-width: 640px) {
+  header > a > img {
+    width: 100%;
+  }
+  header {
+    padding: 1rem 5rem;
+  }
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+  .nav-list {
+    position: static;
+    flex-direction: row;
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
+  }
+  header {
+    padding: 1rem 148px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+/* 2xl */
+@media screen and (min-width: 1536px) {
+}

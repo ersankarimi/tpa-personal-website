@@ -2,11 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 @import url("./root.css");
 @import url("./header.css");
-
-main {
-  color: var(--gray-100);
-  padding: 1rem 2rem;
-}
+@import url("./main.css");
 
 section#hero > h1 {
   font-size: 1.5rem;
@@ -66,17 +62,6 @@ section#projects-list {
 
 /* Media Queries */ /* sm */
 @media screen and (min-width: 640px) {
-  header > a > img {
-    width: 100%;
-  }
-  header {
-    padding: 1rem 5rem;
-  }
-
-  main {
-    padding: 1rem 8rem;
-  }
-
   .project-card__anchor {
     width: 100%;
   }
@@ -84,45 +69,16 @@ section#projects-list {
 
 /* md */
 @media screen and (min-width: 768px) {
-  .nav-list {
-    position: static;
-    flex-direction: row;
-    height: 100%;
-  }
-  .hamburger-menu {
-    display: none;
-  }
-
-  .close-menu {
-    display: none;
-  }
-
-  main {
-    margin-top: 2rem;
-  }
 }
 
 /* lg */
 @media screen and (min-width: 1024px) {
-  header {
-    padding: 1rem 148px;
-  }
-
-  main {
-    padding: 1rem 252px;
-  }
-
   section#hero > h1 {
     font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  main {
-    flex-direction: row;
-    margin-top: 124px;
-  }
-
   section#projects-list {
     justify-content: flex-start;
     flex-direction: row;

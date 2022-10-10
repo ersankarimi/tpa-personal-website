@@ -25,6 +25,8 @@ section p {
 section#introduction > h1 {
   font-family: "Sarina", cursive;
   font-size: 2rem;
+  font-weight: 700;
+  color: var(--green-500);
 }
 
 .introduction__body {
@@ -56,4 +58,30 @@ section > h2 {
 .social-media-link:hover {
   -webkit-filter: brightness(0.9);
   filter: brightness(0.9);
+}
+
+/* Media Queries */
+/* sm */
+@media screen and (min-width: 640px) {
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+  section#introduction > h1 {
+    font-size: 3rem;
+  }
+  section > h2 {
+    font-size: 1.85rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
+
+/* 2xl */
+@media screen and (min-width: 1536px) {
 }

@@ -1,6 +1,139 @@
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
+:root {
+  --black: #000000;
+  ---white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f3f4f6;
+  --gray-200: #e2e8f0;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --green-50: #f0fdf4;
+  --green-100: #dcfce7;
+  --green-200: #bbf7d0;
+  --green-300: #86efac;
+  --green-400: #4ade80;
+  --green-500: #22c55e;
+  --green-600: #16a34a;
+  --green-700: #4d7c0f;
+  --green-800: #3f6212;
+  --green-900: #14532d;
+
+  --xs: 0.75rem;
+  --sm: 0.875rem;
+  --tiny: 0.875rem;
+  --base: 1rem;
+  --lg: 1.125rem;
+  --xl: 1.25rem;
+  --2xl: 1.5rem;
+  --3xl: 1.875rem;
+  --4xl: 2.25rem;
+  --5xl: 3rem;
+  --6xl: 4rem;
+  --7xl: 5rem;
+}
+
 body {
   font-family: "Inter", sans-serif;
+  background-color: var(--gray-800);
+}
+
+header {
+  display: flex;
+  position: relative;
+  padding: 1rem 5rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  color: var(--gray-100);
+}
+
+.nav-list {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gray-800);
+  left: 0;
+  right: 0;
+  top: -1000px;
+  height: 100vh;
+  gap: 3rem;
+  transition: 500ms all;
+}
+
+.nav-link {
+  color: var(--gray-100);
+}
+
+.nav-link:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+.hamburger-menu {
+  width: 2rem;
+  height: 2rem;
+}
+
+.close-menu {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 5rem;
+}
+
+.hamburger-menu,
+.close-menu {
+  cursor: pointer;
+}
+
+.hamburger-menu:hover,
+.close-menu:hover {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+
+/* sm */
+@media (min-width: 640px) {
+}
+
+/* md */
+@media (min-width: 768px) {
+  .nav-list {
+    position: static;
+    flex-direction: row;
+    height: 100%;
+  }
+  .hamburger-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  header {
+    padding: 1rem 148px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
 }

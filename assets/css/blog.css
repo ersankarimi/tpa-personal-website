@@ -1,0 +1,106 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarina&display=swap");
+@import url("./root.css");
+@import url("./header.css");
+@import url("./main.css");
+
+main {
+  padding-bottom: 5em;
+}
+
+section#hero > h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 2em;
+}
+
+section#blog-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4em;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20rem;
+  width: 100%;
+}
+
+.img-cover {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.blog-image {
+  aspect-ratio: auto;
+}
+
+.blog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.blog-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+time {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  opacity: 0.7;
+  gap: 0.5em;
+}
+
+/* Media Queries */ /* sm */
+@media screen and (min-width: 640px) {
+}
+
+/* md */
+@media screen and (min-width: 768px) {
+  /* .blog-image {
+    height: 230px;
+  } */
+}
+
+/* lg */
+@media screen and (min-width: 1024px) {
+  section#hero > h1 {
+    font-size: 2rem;
+  }
+
+  .blog-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  section#blog-items-list {
+    flex-direction: row;
+  }
+
+  .blog-container {
+    width: 45%;
+  }
+}
+
+/* 2xl */
+@media screen and (min-width: 1536px) {
+  section#hero > h1 {
+    font-size: 3rem;
+  }
+
+  .blog-title {
+    font-size: 1.85;
+  }
+}

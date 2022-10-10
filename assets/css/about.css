@@ -24,7 +24,7 @@ section p {
 
 section#introduction > h1 {
   font-family: "Sarina", cursive;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--green-500);
 }

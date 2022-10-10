@@ -45,12 +45,20 @@ body {
   background-color: var(--gray-800);
 }
 
+.absolute {
+  position: absolute;
+}
+
 header {
   display: flex;
   position: relative;
-  padding: 1rem 5rem;
+  padding: 1rem;
   justify-content: space-between;
   align-items: center;
+}
+
+header > a > img {
+  width: 8rem;
 }
 
 nav {
@@ -70,10 +78,17 @@ nav {
   height: 100vh;
   gap: 3rem;
   transition: 500ms all;
+  z-index: 99999;
 }
 
 .nav-link {
   color: var(--gray-100);
+}
+
+.nav-link.active {
+  padding: 0.5em 1em;
+  outline: solid;
+  outline-width: 1px;
 }
 
 .nav-link:hover {
@@ -103,8 +118,133 @@ nav {
   filter: brightness(0.8);
 }
 
+/* main */
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin-top: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Section left */
+#left {
+  color: var(--gray-100);
+  order: 2;
+  margin-top: 3em;
+}
+
+#left > h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#left > h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+#left > h3 {
+  font-size: 0.75rem;
+}
+#left > p {
+  margin-top: 1em;
+  margin-bottom: 3em;
+  font-size: 0.85rem;
+}
+
+#left > button {
+  background-color: var(--green-600);
+  color: var(--gray-100);
+  padding: 8px 4px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+#left > button:hover {
+  -webkit-filter: brightness(0.9);
+  filter: brightness(0.9);
+}
+
+#left > h1,
+#left > h2 {
+  color: var(--green-500);
+}
+
+#right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure > div {
+  position: absolute;
+  background-color: rgba(109, 144, 128, 0.45);
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  width: 120%;
+}
+
+figure > img {
+  width: 171px;
+  height: 272px;
+  background-size: cover;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.img-accessories {
+  width: 5rem;
+  height: 5rem;
+}
+
+.img-accessories:hover {
+  transform: translate3d(10px, 10px, 10px) skew(-2deg);
+  transition: 200ms all;
+}
+
+.accessories-1 {
+  top: 35%;
+  left: -25%;
+}
+
+.accessories-2 {
+  width: 3rem;
+  height: 3rem;
+  top: 0%;
+  right: -25%;
+}
+
+.accessories-3 {
+  width: 3rem;
+  height: 3rem;
+  top: 30%;
+  right: -5%;
+  z-index: -999;
+}
+
+/* Media Queries */
 /* sm */
 @media (min-width: 640px) {
+  header > a > img {
+    width: 100%;
+  }
+  header {
+    padding: 1rem 5rem;
+  }
+
+  main {
+    padding: 1rem 8rem;
+  }
 }
 
 /* md */
@@ -121,19 +261,131 @@ nav {
   .close-menu {
     display: none;
   }
+
+  main {
+    margin-top: 2rem;
+  }
+
+  /* Section left */
+  #left > h1 {
+    font-size: 2rem;
+  }
+
+  #left > h2 {
+    font-size: 1.25rem;
+  }
+
+  #left > h3 {
+    font-size: 0.85rem;
+  }
+
+  #left > p {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.125rem;
+  }
+
+  #left > button {
+    padding: 16px 12px;
+  }
 }
 
 /* lg */
 @media (min-width: 1024px) {
-  header {
+  header,
+  main {
     padding: 1rem 148px;
+  }
+  main {
+    padding: 1rem 252px;
+  }
+
+  figure > img {
+    width: 211px;
+    height: 312px;
   }
 }
 
 /* xl */
 @media (min-width: 1280px) {
+  #left {
+    order: 1;
+  }
+
+  #right {
+    order: 2;
+  }
+
+  #left,
+  #right {
+    width: 50%;
+  }
+  main {
+    flex-direction: row;
+    margin-top: 124px;
+  }
+
+  figure > div {
+    width: 50%;
+  }
+
+  /* Section left */
+  #left > h1 {
+    font-size: 3rem;
+  }
+
+  #left > h2 {
+    font-size: 2.25rem;
+  }
+
+  #left > h3 {
+    font-size: 1.125rem;
+  }
+
+  #left > p {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.125rem;
+  }
+
+  #left > button {
+    background-color: var(--green-600);
+    color: var(--gray-100);
+    font-size: 1rem;
+  }
+
+  figure > img {
+    width: 329px;
+    height: auto;
+  }
+
+  .img-accessories {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .accessories-1 {
+    left: 15%;
+  }
+
+  .accessories-2 {
+    width: 3rem;
+    height: 3rem;
+    top: 0%;
+    right: 22%;
+  }
+
+  .accessories-3 {
+    width: 5rem;
+    height: 5rem;
+    top: 30%;
+    right: 30%;
+  }
 }
 
 /* 2xl */
 @media (min-width: 1536px) {
+  .accessories-1 {
+    left: 20%;
+  }
 }

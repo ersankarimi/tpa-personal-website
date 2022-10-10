@@ -108,3 +108,12 @@ li {
 a {
   text-decoration: none;
 }
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: inherit;
+}
